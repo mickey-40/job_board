@@ -13,8 +13,18 @@ class JobPosting(models.Model):
     description = models.TextField()
     company = models.CharField(max_length=100)
     salary = models.IntegerField()
+    is_active = models.BooleanField(default=False)
 
 # makemigrations
 # -> creates instructions telling django how the db have changed
 # migrate
 # -> applies the above changes
+
+# CRUD
+# create
+# read 
+# update
+# delete
+
+# model manager -> objects
+# JobPosting.objects.all() or .get(id=1) or .filter(company= 'abc tech')
